@@ -1,18 +1,24 @@
-variable "myvar1" {
+
+
+###########################################################################
+######################### VPC VARS
+###########################################################################
+
+variable "EC2_SUBNET" {
   type = string
-  default = "hello world 1"
 }
 
-variable "myvar2" {
-  type = string
-  default = "hello world 2"
-}
+###########################################################################
+######################### EC2 VARS
+###########################################################################
 
-variable "AWS_ACCESS_KEY" {
-}
+# variable "key_name" {
+#     description = "Name of the SSH keypair to use in AWS."
+# }
 
-variable "AWS_SECRET_KEY" {
-}
+# variable "key_path" {
+#     description = "Path to the private portion of the SSH key specified."
+# }
 
 variable "AWS_REGION" {
   default = "us-east-1"
@@ -21,7 +27,7 @@ variable "AWS_REGION" {
 variable "AMIS" {
   type = map
   default = {
-    us-east-1 = "ami-13be557e"
+    us-east-1 = "ami-00068cd7555f543d5"
     us-west-2 = "ami-06b94666"
     eu-west-1 = "ami-0d729a60"
   }
